@@ -28,12 +28,12 @@ for filename in os.listdir('.'):
             width = int((SQUARE_FIT_SIZE / height)* width)
             height = SQUAER_FIT_SIZE
 
-        print('Resizing %s...' % (filename))
-        im=im.resize((width, height))
+            print('Resizing %s...' % (filename))
+            im=im.resize((width, height))
+        
 
-        print('adding logo to %s...' % (filename))
-        im.paste(logoIm, (width-logoWidth, height - logoHeight), logoIm)
-
-        im.save(os.path.join('withLogo', filename))
+print('adding logo to %s...' % (filename))
+im.paste(logoIm, (width-logoWidth, height - logoHeight), logoIm)
+im.save(os.path.join('withLogo', filename))
         
                                          
