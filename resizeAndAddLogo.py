@@ -19,6 +19,7 @@ for filename in os.listdir('originals'):
     im=Image.open('originals/'+filename)
     width, height=im.size
 
+
     if width > SQUARE_FIT_SIZE or height > SQUARE_FIT_SIZE:
 
         if width > height:
