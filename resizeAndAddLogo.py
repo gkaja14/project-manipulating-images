@@ -20,7 +20,7 @@ for filename in os.listdir('originals'):
     width, height=im.size
 
 
-    if width > SQUARE_FIT_SIZE or height > SQUARE_FIT_SIZE:
+    if width > SQUARE_FIT_SIZE and height > SQUARE_FIT_SIZE:
 
         if width > height:
             height=int((SQUARE_FIT_SIZE / width)*height)
