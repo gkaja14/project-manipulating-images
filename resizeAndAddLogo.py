@@ -16,7 +16,7 @@ for filename in os.listdir('originals'):
        or filename==LOGO_FILENAME:
         continue
     
-    im=Image.open(filename)
+    im=Image.open(os.path.join, filename)
     width, height=im.size
 
 
