@@ -1,4 +1,4 @@
-                                         
+
 import os
 from PIL import Image
 
@@ -16,7 +16,8 @@ for filename in os.listdir('originals'):
        or filename==LOGO_FILENAME:
         continue
     
-    im=Image.open(os.path.join('originals', filename))
+    im=Image.open (os.path.join('originals', filename))
+    
     width, height=im.size
 
 
@@ -37,5 +38,3 @@ for filename in os.listdir('originals'):
     print('adding logo to %s...' % (filename))
     im.paste(logoIm, (width-logoWidth, height - logoHeight), logoIm)
     im.save(os.path.join('withLogo', filename))
-
-#    im=Image.open('originals/'+filename)
